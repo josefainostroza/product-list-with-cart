@@ -1,3 +1,20 @@
+:root {
+  --text-preset-1: 40px;
+  --text-preset-2: 24px;
+  --text-preset-3: 16px;
+  --text-preset-4: 14px;
+  --line-height: 120%;
+  --color-red: #c73b0f;
+  --color-rose-900: #260f08;
+  --color-rose-500: #87635a;
+  --color-rose-400: #ad8a85;
+  --color-rose-300: #caafa7;
+  --color-rose-100: #f5eeec;
+  --color-rose-50: #fcf8f6;
+  --color-green: #1ea575;
+  --color-black: #000000;
+  --color-white: #ffffff;
+}
 * {
   box-sizing: border-box;
 }
@@ -21,6 +38,102 @@ ul {
 }
 body {
   margin: 0;
-  font-family: sans-serif;
-  color: aliceblue;
+  font-family: 'Red Hat Text', sans-serif;
+  color: #000;
+}
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+h1 {
+  font-size: var(--text-preset-1);
+}
+h2 {
+  font-size: var(--text-preset-2);
+}
+h3 {
+  font-size: var(--text-preset-3);
+}
+p {
+  font-size: var(--text-preset-4);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  gap: 26px;
+}
+
+.filter {
+  width: 77px;
+  height: 34px;
+  border-radius: 100px;
+  border: 1px solid var(--color-rose-400);
+  background-color: var(--color-white);
+}
+
+.filters {
+  display: flex;
+  gap: 19px;
+  margin-top: 6px;
+}
+@media screen and (width> 1024px) {
+  .filter {
+    width: 100px;
+    height: 34px;
+  }
+}
+
+.red {
+  color: var(--color-rose-100);
+  background-color: var(--color-red);
+}
+
+.container-product {
+  display: flex;
+  flex-direction: column;
+  gap: 38px;
+}
+.container-image {
+  position: relative;
+  display: inline-block;
+}
+.image {
+  border-radius: 8px;
+}
+
+.add-cart {
+  position: absolute;
+  bottom: -22px;
+  left: calc(50% - 80px);
+  width: 160px;
+  height: 44px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-rose-400);
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.image-add {
+  width: 20px;
+}
+.container-tex-cart {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.container-tex-cart > h3 {
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+.price {
+  color: var(--color-red);
 }
