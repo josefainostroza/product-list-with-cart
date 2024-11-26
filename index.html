@@ -8,213 +8,223 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Red+Hat+Text:ital,wght@0,300..700;1,300..700&display=swap"
-      rel="stylesheet"
-    />
+      rel="stylesheet" />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
-    <main class="container">
+    <header class="header">
       <h1 class="title">Desserts</h1>
       <div class="filters">
         <button class="filter red">Default</button>
         <button class="filter">Name</button>
         <button class="filter">Price</button>
       </div>
-      <div class="container-product">
-        <div class="container-image">
-          <img
-            class="image"
-            src="./assets/images/image-waffle-mobile.jpg"
-            alt=""
-          />
-          <div class="add-cart">
+    </header>
+    <main id="container" class="container">
+      <section class="container-">
+      </section>
+      <section class="container-all-product">
+        <div class="container-product">
+          <div class="container-image">
             <img
-              class="image-add"
-              src="./assets/images/icon-add-to-cart.svg"
-              alt=""
-            />
-            <p class="add">Add to Cart</p>
+              class="image"
+              src="./assets/images/image-waffle-mobile.jpg"
+              alt />
+            <div class="add-cart-remove">
+              <img
+                data-type="substract" data-id="product-waffle"
+                id="icon-decrement" class="icon"
+                src="./assets/images/icon-decrement-quantity.svg"
+                alt />
+              <p id="add-remove" class="add-remove">1</p>
+              <img
+                data-type="add" data-id="product-waffle"
+                id="icon-increment" class="icon"
+                src="./assets/images/icon-increment-quantity.svg"
+                alt />
+            </div>
+            <div id="add-cart" class="add-cart" data-id="product-waffle">
+              <img
+                class="image-add"
+                src="./assets/images/icon-add-to-cart.svg"
+                alt />
+              <p class="add">Add to Cart</p>
+            </div>
+
+          </div>
+          <div class="container-tex-cart">
+            <p>Waffle</p>
+            <h3>Waffle with Berries</h3>
+            <h3 class="price">$6.50</h3>
           </div>
         </div>
-        <div class="container-tex-cart">
-          <p>Waffle</p>
-          <h3>Waffle with Berries</h3>
-          <h3 class="price">$6.50</h3>
-        </div>
-      </div>
-      <div class="container-product">
-        <div class="container-image">
-          <img
-            class="image"
-            src="./assets/images/image-creme-brulee-mobile.jpg"
-            alt=""
-          />
-          <div class="add-cart">
+        <div class="container-product">
+          <div class="container-image">
             <img
-              class="image-add"
-              src="./assets/images/icon-add-to-cart.svg"
-              alt=""
-            />
-            <p class="add">Add to Cart</p>
+              class="image"
+              src="./assets/images/image-creme-brulee-mobile.jpg"
+              alt />
+            <div class="add-cart">
+              <img
+                class="image-add"
+                src="./assets/images/icon-add-to-cart.svg"
+                alt />
+              <p class="add">Add to Cart</p>
+            </div>
+          </div>
+          <div class="container-tex-cart">
+            <p>Waffle</p>
+            <h3>Waffle with Berries</h3>
+            <h3 class="price">$6.50</h3>
           </div>
         </div>
-        <div class="container-tex-cart">
-          <p>Waffle</p>
-          <h3>Waffle with Berries</h3>
-          <h3 class="price">$6.50</h3>
-        </div>
-      </div>
-      <div class="container-product">
-        <div class="container-image">
-          <img
-            class="image"
-            src="./assets/images/image-macaron-mobile.jpg"
-            alt=""
-          />
-          <div class="add-cart">
+        <div class="container-product">
+          <div class="container-image">
             <img
-              class="image-add"
-              src="./assets/images/icon-add-to-cart.svg"
-              alt=""
-            />
-            <p class="add">Add to Cart</p>
+              class="image"
+              src="./assets/images/image-macaron-mobile.jpg"
+              alt />
+            <div class="add-cart">
+              <img
+                class="image-add"
+                src="./assets/images/icon-add-to-cart.svg"
+                alt />
+              <p class="add">Add to Cart</p>
+            </div>
+          </div>
+          <div class="container-tex-cart">
+            <p>Waffle</p>
+            <h3>Waffle with Berries</h3>
+            <h3 class="price">$6.50</h3>
           </div>
         </div>
-        <div class="container-tex-cart">
-          <p>Waffle</p>
-          <h3>Waffle with Berries</h3>
-          <h3 class="price">$6.50</h3>
-        </div>
-      </div>
-      <div class="container-product">
-        <div class="container-image">
-          <img
-            class="image"
-            src="./assets/images/image-tiramisu-mobile.jpg"
-            alt=""
-          />
-          <div class="add-cart">
+        <div class="container-product">
+          <div class="container-image">
             <img
-              class="image-add"
-              src="./assets/images/icon-add-to-cart.svg"
-              alt=""
-            />
-            <p class="add">Add to Cart</p>
+              class="image"
+              src="./assets/images/image-tiramisu-mobile.jpg"
+              alt />
+            <div class="add-cart">
+              <img
+                class="image-add"
+                src="./assets/images/icon-add-to-cart.svg"
+                alt />
+              <p class="add">Add to Cart</p>
+            </div>
+          </div>
+          <div class="container-tex-cart">
+            <p>Waffle</p>
+            <h3>Waffle with Berries</h3>
+            <h3 class="price">$6.50</h3>
           </div>
         </div>
-        <div class="container-tex-cart">
-          <p>Waffle</p>
-          <h3>Waffle with Berries</h3>
-          <h3 class="price">$6.50</h3>
-        </div>
-      </div>
-      <div class="container-product">
-        <div class="container-image">
-          <img
-            class="image"
-            src="./assets/images/image-baklava-mobile.jpg"
-            alt=""
-          />
-          <div class="add-cart">
+        <div class="container-product">
+          <div class="container-image">
             <img
-              class="image-add"
-              src="./assets/images/icon-add-to-cart.svg"
-              alt=""
-            />
-            <p class="add">Add to Cart</p>
+              class="image"
+              src="./assets/images/image-baklava-mobile.jpg"
+              alt />
+            <div class="add-cart">
+              <img
+                class="image-add"
+                src="./assets/images/icon-add-to-cart.svg"
+                alt />
+              <p class="add">Add to Cart</p>
+            </div>
+          </div>
+          <div class="container-tex-cart">
+            <p>Waffle</p>
+            <h3>Waffle with Berries</h3>
+            <h3 class="price">$6.50</h3>
           </div>
         </div>
-        <div class="container-tex-cart">
-          <p>Waffle</p>
-          <h3>Waffle with Berries</h3>
-          <h3 class="price">$6.50</h3>
-        </div>
-      </div>
-      <div class="container-product">
-        <div class="container-image">
-          <img
-            class="image"
-            src="./assets/images/image-meringue-mobile.jpg"
-            alt=""
-          />
-          <div class="add-cart">
+        <div class="container-product">
+          <div class="container-image">
             <img
-              class="image-add"
-              src="./assets/images/icon-add-to-cart.svg"
-              alt=""
-            />
-            <p class="add">Add to Cart</p>
+              class="image"
+              src="./assets/images/image-meringue-mobile.jpg"
+              alt />
+            <div class="add-cart">
+              <img
+                class="image-add"
+                src="./assets/images/icon-add-to-cart.svg"
+                alt />
+              <p class="add">Add to Cart</p>
+            </div>
+          </div>
+          <div class="container-tex-cart">
+            <p>Waffle</p>
+            <h3>Waffle with Berries</h3>
+            <h3 class="price">$6.50</h3>
           </div>
         </div>
-        <div class="container-tex-cart">
-          <p>Waffle</p>
-          <h3>Waffle with Berries</h3>
-          <h3 class="price">$6.50</h3>
-        </div>
-      </div>
-      <div class="container-product">
-        <div class="container-image">
-          <img
-            class="image"
-            src="./assets/images/image-cake-mobile.jpg"
-            alt=""
-          />
-          <div class="add-cart">
+        <div class="container-product">
+          <div class="container-image">
             <img
-              class="image-add"
-              src="./assets/images/icon-add-to-cart.svg"
-              alt=""
-            />
-            <p class="add">Add to Cart</p>
+              class="image"
+              src="./assets/images/image-cake-mobile.jpg"
+              alt />
+            <div class="add-cart">
+              <img
+                class="image-add"
+                src="./assets/images/icon-add-to-cart.svg"
+                alt />
+              <p class="add">Add to Cart</p>
+            </div>
+          </div>
+          <div class="container-tex-cart">
+            <p>Waffle</p>
+            <h3>Waffle with Berries</h3>
+            <h3 class="price">$6.50</h3>
           </div>
         </div>
-        <div class="container-tex-cart">
-          <p>Waffle</p>
-          <h3>Waffle with Berries</h3>
-          <h3 class="price">$6.50</h3>
-        </div>
-      </div>
-      <div class="container-product">
-        <div class="container-image">
-          <img
-            class="image"
-            src="./assets/images/image-brownie-mobile.jpg"
-            alt=""
-          />
-          <div class="add-cart">
+        <div class="container-product">
+          <div class="container-image">
             <img
-              class="image-add"
-              src="./assets/images/icon-add-to-cart.svg"
-              alt=""
-            />
-            <p class="add">Add to Cart</p>
+              class="image"
+              src="./assets/images/image-brownie-mobile.jpg"
+              alt />
+            <div class="add-cart">
+              <img
+                class="image-add"
+                src="./assets/images/icon-add-to-cart.svg"
+                alt />
+              <p class="add">Add to Cart</p>
+            </div>
+          </div>
+          <div class="container-tex-cart">
+            <p>Waffle</p>
+            <h3>Waffle with Berries</h3>
+            <h3 class="price">$6.50</h3>
           </div>
         </div>
-        <div class="container-tex-cart">
-          <p>Waffle</p>
-          <h3>Waffle with Berries</h3>
-          <h3 class="price">$6.50</h3>
-        </div>
-      </div>
-      <div class="container-product">
-        <div class="container-image">
-          <img
-            class="image"
-            src="./assets/images/image-panna-cotta-mobile.jpg"
-            alt=""
-          />
-          <div class="add-cart">
+        <div class="container-product">
+          <div class="container-image">
             <img
-              class="image-add"
-              src="./assets/images/icon-add-to-cart.svg"
-              alt=""
-            />
-            <p class="add">Add to Cart</p>
+              class="image"
+              src="./assets/images/image-panna-cotta-mobile.jpg"
+              alt />
+            <div class="add-cart">
+              <img
+                class="image-add"
+                src="./assets/images/icon-add-to-cart.svg"
+                alt />
+              <p class="add">Add to Cart</p>
+            </div>
           </div>
-        </div>
-        
-    </main>
-    <footer></footer>
-    <script src="js/scripts.js"></script>
-  </body>
-</html>
+        </section>
+        <section class="container-cart-generate">
+          <h2 class="title-cart">Your Cart (0)</h2>
+          <div class="container-cart">
+            <img
+              class="image-cart"
+              src="./assets/images/illustration-empty-cart.svg"
+              alt />
+            <p class="text-card">Your added items will appear here</p>
+          </div>
+        </section>
+      </main>
+      <footer></footer>
+      <script src="js/scripts.js"></script>
+    </body>
+  </html>

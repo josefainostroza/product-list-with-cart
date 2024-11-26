@@ -40,6 +40,7 @@ body {
   margin: 0;
   font-family: 'Red Hat Text', sans-serif;
   color: #000;
+  background-color: var(--color-rose-50);
 }
 h1,
 h2,
@@ -59,7 +60,9 @@ h3 {
 p {
   font-size: var(--text-preset-4);
 }
-
+.header {
+  padding: 24px;
+}
 .container {
   display: flex;
   flex-direction: column;
@@ -67,6 +70,12 @@ p {
   gap: 26px;
 }
 
+@media screen and (width > 1024px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+  }
+}
 .filter {
   width: 77px;
   height: 34px;
@@ -90,6 +99,22 @@ p {
 .red {
   color: var(--color-rose-100);
   background-color: var(--color-red);
+}
+
+.container-all-product {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+@media screen and (width > 768px) {
+  .container-all-product {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 24px;
+    grid-row-gap: 32px;
+  }
 }
 
 .container-product {
@@ -123,10 +148,36 @@ p {
 .image-add {
   width: 20px;
 }
+
+.add-cart-remove {
+  position: absolute;
+  bottom: -22px;
+  left: calc(50% - 80px);
+  width: 160px;
+  height: 44px;
+  background-color: var(--color-red);
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 44px;
+}
+.add-remove {
+  color: var(--color-white);
+}
+
 .container-tex-cart {
   display: flex;
   flex-direction: column;
   gap: 4px;
+}
+
+.icon {
+  border: 1px solid var(--color-white);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  padding: 4px;
 }
 
 .container-tex-cart > h3 {
@@ -134,6 +185,41 @@ p {
   font-weight: 600;
   font-style: normal;
 }
-.price {
+.price,
+.title-cart {
   color: var(--color-red);
+}
+.image-cart {
+  width: 128px;
+}
+.text-card {
+  color: var(--color-rose-500);
+}
+.container-cart {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+.container-cart-generate {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  gap: 40px;
+}
+
+@media screen and (width> 1024px) {
+  .container-cart-generate {
+    width: 384px;
+    flex-shrink: 0;
+    /* sirve para que flex no aplaste el elemento */
+    height: fit-content;
+  }
+}
+
+.element-disable {
+  display: none;
 }
