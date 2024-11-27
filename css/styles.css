@@ -223,3 +223,7 @@ p {
 .element-disable {
   display: none;
 }
+
+.event-pointer {
+  pointer-events: none;
+}

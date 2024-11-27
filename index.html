@@ -21,9 +21,8 @@
       </div>
     </header>
     <main id="container" class="container">
-      <section class="container-">
-      </section>
-      <section class="container-all-product">
+
+      <section id class="container-all-product">
         <div class="container-product">
           <div class="container-image">
             <img
@@ -32,25 +31,25 @@
               alt />
             <div class="add-cart-remove">
               <img
-                data-type="substract" data-id="product-waffle"
+                data-type="substract" data-name="Waffle with Berries"
                 id="icon-decrement" class="icon"
                 src="./assets/images/icon-decrement-quantity.svg"
                 alt />
-              <p id="add-remove" class="add-remove">1</p>
+              <p>1</p>
               <img
-                data-type="add" data-id="product-waffle"
+                data-type="increment" data-name="Waffle with Berries"
                 id="icon-increment" class="icon"
                 src="./assets/images/icon-increment-quantity.svg"
                 alt />
             </div>
-            <div id="add-cart" class="add-cart" data-id="product-waffle">
+            <button class="add-cart " data-type="add"
+              data-name="Waffle with Berries" data-price="6.5">
               <img
-                class="image-add"
+                class="image-add event-pointer"
                 src="./assets/images/icon-add-to-cart.svg"
                 alt />
-              <p class="add">Add to Cart</p>
-            </div>
-
+              <p class="add event-pointer">Add to Cart</p>
+            </button>
           </div>
           <div class="container-tex-cart">
             <p>Waffle</p>
@@ -64,18 +63,32 @@
               class="image"
               src="./assets/images/image-creme-brulee-mobile.jpg"
               alt />
-            <div class="add-cart">
+            <div class="add-cart-remove">
               <img
-                class="image-add"
+                data-type="substract" data-name="Waffle with Berries"
+                id="icon-decrement" class="icon"
+                src="./assets/images/icon-decrement-quantity.svg"
+                alt />
+              <p id="add-remove" class="add-remove">0</p>
+              <img
+                data-type="increment" data-name="Waffle with Berries"
+                id="icon-increment" class="icon"
+                src="./assets/images/icon-increment-quantity.svg"
+                alt />
+            </div>
+            <button id="creme" class="add-cart" data-type="add"
+              data-name="Waffle with Berries">
+              <img
+                class="image-add event-pointer"
                 src="./assets/images/icon-add-to-cart.svg"
                 alt />
-              <p class="add">Add to Cart</p>
-            </div>
+              <p class="add event-pointer">Add to Cart</p>
+            </button>
           </div>
           <div class="container-tex-cart">
-            <p>Waffle</p>
-            <h3>Waffle with Berries</h3>
-            <h3 class="price">$6.50</h3>
+            <p>Crème Brûlée</p>
+            <h3>Vanilla Bean Crème Brûlée</h3>
+            <h3 class="price">$7.00</h3>
           </div>
         </div>
         <div class="container-product">

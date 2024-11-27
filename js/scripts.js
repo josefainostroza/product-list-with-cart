@@ -1,8 +1,3 @@
-const addElement = document.getElementById('add-cart');
-const decrementElement = document.getElementById('icon-decrement');
-const incrementElement = document.getElementById('icon-increment');
-const numberElement = document.getElementById('add-remove');
-
 const containerElement = document.getElementById('container');
 
 const products = [
@@ -14,55 +9,62 @@ const products = [
   },
   {
     id: 'product-creme',
-    name: 'creme',
-    price: 6.5,
+    name: 'Vanilla Bean Crème Brûlée',
+    price: 7.0,
     quantity: 0,
   },
 ];
 
-const addButton = (e) => {
-  const idProduct = e.target.dataset.id;
-  const typeProduct = e.target.dataset.type;
+let productsCart = [];
 
-  if (idProduct === 'product-waffle') {
-    addElement.classList.add('element-disable');
+const addToCart = (name, price) => {
+  productsCart.push({ name: name, price: price, quantity: 1 });
+};
+
+const removeProductFromCart = (name, element) => {
+  productsCart = productsCart.filter((product) => product.name !== name);
+  element.parentElement.nextElementSibling.classList.remove('element-disable');
+};
+
+const incrementProductQuantity = (name, element) => {
+  const productSelected = productsCart.find((product) => product.name === name);
+  productSelected.quantity++;
+  console.log(productsCart);
+  element.textContent = productSelected.quantity;
+};
+
+const decrementProductQuantity = (name, element) => {
+  const productSelected = productsCart.find((product) => product.name === name);
+  if (productSelected.quantity === 1) {
+    removeProductFromCart(name, element);
+  } else {
+    productSelected.quantity--;
+    element.textContent = productSelected.quantity;
+  }
+  console.log(productSelected.quantity);
+};
+
+const manageCart = (event) => {
+  const type = event.target.dataset.type;
+  const name = event.target.dataset.name;
+  const price = event.target.dataset.price;
+
+  if (!type) {
+    return;
   }
 
-  if (typeProduct === 'add') {
-    if (idProduct === 'product-waffle') {
-      increment();
-    }
+  if (type === 'add') {
+    event.target.classList.add('element-disable');
+    addToCart(name, price);
   }
 
-  if (typeProduct === 'substract') {
-    if (idProduct === 'product-waffle') {
-      decrement();
-    }
+  if (type === 'increment') {
+    incrementProductQuantity(name, event.target.previousElementSibling);
+  }
+
+  if (type === 'substract') {
+    decrementProductQuantity(name, event.target.nextElementSibling);
   }
 };
 
-const increment = () => {
-  const item = products.find((product) => {
-    return product.id === 'product-creme';
-  });
-  item.quantity++;
-  numberElement.textContent = item.quantity;
-  console.log(item);
-};
-
-const decrement = () => {
-  const item = products.find((product) => {
-    return product.id === 'product-creme';
-  });
-  item.quantity--;
-  numberElement.textContent = item.quantity;
-  console.log(item);
-  if (item.quantity <= 0) {
-    return addElement.classList.remove('element-disable');
-  }
-};
-
-containerElement.addEventListener('click', addButton);
-
-// incrementElement.addEventListener('click', increment);
-// decrementElement.addEventListener('click', decrement);
+containerElement.addEventListener('click', manageCart);
