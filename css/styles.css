@@ -227,3 +227,23 @@ p {
 .event-pointer {
   pointer-events: none;
 }
+
+.textCardElement{
+font-weight: 600;  
+color: var(--color-rose-900)
+}
+.quantityProduct{
+  font-weight: 600;  
+color: var(--color-red)
+}
+.priceProduct{
+  color: var(--color-rose-500)
+}
+.priceQuantity{
+  font-weight: 600;  
+  color: var(--color-rose-500)
+}
+.cartproducts{
+ display: flex; 
+ gap: 8px;
+}
